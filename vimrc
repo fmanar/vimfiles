@@ -22,6 +22,9 @@ set expandtab
 set autoindent
 set wrap
 
+" show hidden characters
+set list lcs=trail:·,tab:»—
+
 " ui config
 set splitright
 set hidden
@@ -67,3 +70,7 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+
+" tab to switch buffers and tab pages
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
