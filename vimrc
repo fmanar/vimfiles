@@ -1,5 +1,33 @@
-" removed pull in of defaults
-" source $VIMRUNTIME/defaults.vim
+" vimrc file
+" Field Manar
+
+" set leader to space
+let mapleader = ' '
+
+" commands
+" clipboard
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+
+" clear search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+" tab to switch buffers and tab pages with autowrite
+nnoremap  <silent>   <tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR> :bnext<CR>
+nnoremap  <silent> <s-tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR> :bprevious<CR>
+
+" make Y consistent with C and D
+nnoremap Y y$
+
+" redo with U
+nnoremap U <c-r>
+
+" easy open this file
+command! Vimrc :vsplit $MYVIMRC
 
 " use modern encoding
 set encoding=utf-8
@@ -29,7 +57,7 @@ set list lcs=trail:·,tab:»—
 set splitright
 set hidden
 set number
-set relativenumber
+" set relativenumber
 set cursorline
 set showmatch
 set wildmenu
@@ -37,21 +65,23 @@ set history=512
 set display=truncate
 set scrolloff=3
 set backspace=indent,eol,start
+set lazyredraw
+set autoread
 
 " gui options
-set guifont=Consolas,12
+set guifont=Consolas:h11
 "set guioptions=rL
 set guioptions=
 
 " status line
 set laststatus=2
-set ruler
+set statusline=%f\ %<%h%m%r%=b%n\ %-12.y\ %-12.(%l,%c%V%)\ %P
 
 " searching
 set incsearch
 set hlsearch
-nnoremap <leader><space> :nohlsearch<CR>
-" leader is backslash, thus typing '\ ' clears highlights
+set ignorecase
+set smartcase
 
 " syntax colors
 syntax enable
@@ -61,16 +91,10 @@ colorscheme one
 " filetype detection
 filetype plugin indent on
 
-" make setup
-set makeprg=mingw32-make
-
 " netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 0
+let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 
-" tab to switch buffers and tab pages
-nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
