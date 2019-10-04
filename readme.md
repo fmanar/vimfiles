@@ -4,3 +4,9 @@ This is my vim config.  Feel free to borrow/judge.
 On linux put this repo in ~/.vim/
 On windows put this repo in ~/vimfiles/
 
+Included plugins:
+NERDtree
+ctrlp
+surround
+commentary
+
