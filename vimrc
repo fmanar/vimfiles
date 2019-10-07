@@ -5,11 +5,13 @@
 let mapleader = ' '
 
 " commands
-" clipboard
-vmap <leader>y "+y
-vmap <leader>d "+d
+" clipboard acces
+nmap <leader>y "+y
+nmap <leader>d "+d
 nmap <leader>p "+p
 nmap <leader>P "+P
+vmap <leader>y "+y
+vmap <leader>d "+d
 vmap <leader>p "+p
 vmap <leader>P "+P
 
@@ -75,7 +77,7 @@ set guioptions=
 
 " status line
 set laststatus=2
-set statusline=%f\ %<%h%m%r%=b%n\ %-12.y\ %-12.(%l,%c%V%)\ %P
+set statusline=(%{winnr()})\ %f\ %<%h%m%r%=b%n\ %-12.y\ %-12.(%l,%c%V%)\ %P
 
 " searching
 set incsearch
