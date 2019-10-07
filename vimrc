@@ -28,8 +28,22 @@ nnoremap Y y$
 " redo with U
 nnoremap U <c-r>
 
+" window hop with leader#
+nmap <leader>1 :1wincmd w<CR>
+nmap <leader>2 :2wincmd w<CR>
+nmap <leader>3 :3wincmd w<CR>
+nmap <leader>4 :4wincmd w<CR>
+nmap <leader>5 :5wincmd w<CR>
+nmap <leader>6 :6wincmd w<CR>
+nmap <leader>7 :7wincmd w<CR>
+nmap <leader>8 :8wincmd w<CR>
+nmap <leader>9 :9wincmd w<CR>
+
 " easy open this file
 command! Vimrc :vsplit $MYVIMRC
+
+" use vim no vi
+set nocompatible
 
 " use modern encoding
 set encoding=utf-8
