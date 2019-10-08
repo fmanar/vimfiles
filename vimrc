@@ -1,49 +1,54 @@
 " vimrc file
 " Field Manar
 
+" use vim not vi
+set nocompatible
+
 " set leader to space
 let mapleader = ' '
 
 " commands
 " clipboard acces
-nmap <leader>y "+y
-nmap <leader>d "+d
-nmap <leader>p "+p
-nmap <leader>P "+P
-vmap <leader>y "+y
-vmap <leader>d "+d
-vmap <leader>p "+p
-vmap <leader>P "+P
+nnoremap <leader>y "+y
+nnoremap <leader>d "+d
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>y "+y
+vnoremap <leader>d "+d
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
 
 " clear search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
-" tab to switch buffers and tab pages with autowrite
+" quickly switch buffers
+nnoremap  gb :ls<CR>:b<space>
+" tab to cycle buffers and tab pages with autowrite
 nnoremap  <silent>   <tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR> :bnext<CR>
 nnoremap  <silent> <s-tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR> :bprevious<CR>
 
 " make Y consistent with C and D
 nnoremap Y y$
 
+" use Q for formatting, rather than ex mode
+nnoremap Q gq
+
 " redo with U
 nnoremap U <c-r>
 
 " window hop with leader#
-nmap <leader>1 :1wincmd w<CR>
-nmap <leader>2 :2wincmd w<CR>
-nmap <leader>3 :3wincmd w<CR>
-nmap <leader>4 :4wincmd w<CR>
-nmap <leader>5 :5wincmd w<CR>
-nmap <leader>6 :6wincmd w<CR>
-nmap <leader>7 :7wincmd w<CR>
-nmap <leader>8 :8wincmd w<CR>
-nmap <leader>9 :9wincmd w<CR>
+nnoremap <leader>1 :1wincmd w<CR>
+nnoremap <leader>2 :2wincmd w<CR>
+nnoremap <leader>3 :3wincmd w<CR>
+nnoremap <leader>4 :4wincmd w<CR>
+nnoremap <leader>5 :5wincmd w<CR>
+nnoremap <leader>6 :6wincmd w<CR>
+nnoremap <leader>7 :7wincmd w<CR>
+nnoremap <leader>8 :8wincmd w<CR>
+nnoremap <leader>9 :9wincmd w<CR>
 
 " easy open this file
 command! Vimrc :vsplit $MYVIMRC
-
-" use vim no vi
-set nocompatible
 
 " use modern encoding
 set encoding=utf-8
@@ -73,7 +78,6 @@ set list lcs=trail:·,tab:»—
 set splitright
 set hidden
 set number
-" set relativenumber
 set cursorline
 set showmatch
 set wildmenu
@@ -86,7 +90,6 @@ set autoread
 
 " gui options
 set guifont=Consolas:h11
-"set guioptions=rL
 set guioptions=
 
 " status line
