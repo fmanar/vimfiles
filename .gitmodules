@@ -10,3 +10,6 @@
 [submodule "NERDtree"]
 	path = pack/NERD/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim-obsession"]
+	path = pack/tpope/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git

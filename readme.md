@@ -8,4 +8,5 @@ Included plugins:
 - [ctrlp](https://github.com/kien/ctrlp.vim)
 - [surround](https://github.com/tpope/vim-surround)
 - [commentary](https://github.com/tpope/vim-commentary)
+- [obsession](https://github.com/tpope/vim-obsession)
 
