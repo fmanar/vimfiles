@@ -1,15 +1,20 @@
 [submodule "vim-surround"]
 	path = pack/tpope/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+  ignore = dirty
 [submodule "vim-commentary"]
 	path = pack/tpope/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+  ignore = dirty
 [submodule "ctrlp"]
 	path = pack/ctrlp/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+  ignore = dirty
 [submodule "NERDtree"]
 	path = pack/NERD/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+  ignore = dirty
 [submodule "vim-obsession"]
 	path = pack/tpope/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
+  ignore = dirty
